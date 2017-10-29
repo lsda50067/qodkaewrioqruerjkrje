@@ -23,7 +23,8 @@ public class ThreeTask extends AsyncTask<Integer, Integer, Void> {
 
     @Override
     protected Void doInBackground(Integer... params) {
-        for (int i=0; i<params[0]; i++){
+        for (int i=0; i < params[0]; i++){
+            // publish updates on the UI thread while the background 
             publishProgress(i);
             try {
                 Thread.sleep(1000);
